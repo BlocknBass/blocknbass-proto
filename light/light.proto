@@ -1,4 +1,4 @@
-syntax = "proto3"
+syntax = "proto3";
 
 package light;
 option java_package = "nl.blocknbass.light.proto";
