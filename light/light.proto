@@ -1,0 +1,23 @@
+syntax = "proto3"
+
+package light;
+option java_package = "nl.blocknbass.light.proto";
+option java_outer_classname = "LightMessageProto";
+
+message LightMessage {
+	uint64 x = 1;
+	uint64 y = 2;
+	uint64 z = 3;
+	//TODO: these can probably be coalesced into a couple of int64/32's
+	int32 pan = 4;
+	int32 tilt = 5;
+	int32 dimmer = 6;
+	int32 strobe = 7;
+	int32 red = 8;
+	int32 green = 9;
+	int32 blue = 10;
+	int32 white = 11;
+	int32 amber = 12;
+	int32 uv = 13;
+	int32 fx = 14;
+}
