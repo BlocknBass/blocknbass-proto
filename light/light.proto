@@ -4,10 +4,26 @@ package light;
 option java_package = "nl.blocknbass.light.proto";
 option java_outer_classname = "LightMessageProto";
 
+enum LightsUpdateType {
+	SET_LIGHTS = 0;
+	ADD_LIGHT = 1;
+	REMOVE_LIGH = 2;
+}
+
+message LightsUpdateMessage {
+	uint32 type = 1;
+	repeated FixtureMessage lights = 2;
+}
+
+message FixtureMessage {
+	uint32 id = 1;
+	uint64 x = 2;
+	uint64 y = 3;
+	uint64 z = 4;
+}
+
 message LightMessage {
-	uint64 x = 1;
-	uint64 y = 2;
-	uint64 z = 3;
+	uint32 id = 1;
 	//TODO: these can probably be coalesced into a couple of int64/32's
 	int32 pan = 4;
 	int32 tilt = 5;

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package build;
+option java_package = "nl.blocknbass.build.proto";
+option java_outer_classname = "BuildMessageProto";
+
+import "light/light.proto";
+
+enum MsgType {
+	BUILD_LIGHT = 0;
+	LIST_LIGHTS = 1;
+	REMOVE_LIGHT = 2;
+}
+
+message BuildMessage {
+	uint32 type = 1;
+	repeated light.FixtureMessage lights = 4;
+}
