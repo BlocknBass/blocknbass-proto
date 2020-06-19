@@ -7,7 +7,7 @@ option java_outer_classname = "LightMessageProto";
 enum LightsUpdateType {
 	SET_LIGHTS = 0;
 	ADD_LIGHT = 1;
-	REMOVE_LIGH = 2;
+	REMOVE_LIGHT = 2;
 }
 
 message LightsUpdateMessage {
@@ -17,9 +17,9 @@ message LightsUpdateMessage {
 
 message FixtureMessage {
 	uint32 id = 1;
-	uint64 x = 2;
-	uint64 y = 3;
-	uint64 z = 4;
+	int64 x = 2;
+	int64 y = 3;
+	int64 z = 4;
 }
 
 message LightMessage {
