@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package audio;
+option java_package = "nl.blocknbass.audio.proto";
+option java_outer_classname = "AudioMessageProto";
+
+enum AudioCommand {
+	PLAY_AUDIO = 0;
+	STOP_AUDIO = 1;
+}
+
+message AudioMessage {
+	uint32 type = 1;
+	string url = 2;
+}
